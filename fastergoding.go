@@ -74,6 +74,7 @@ func restart(rootPath string, buildArgs ...string) {
 			break
 		}
 	}
+	runCmd("swag", "init")
 	runCmd("go", cmdArgs...)
 
 	defer func() {
